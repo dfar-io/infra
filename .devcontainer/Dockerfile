@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/base:bookworm
 
 # Install base dependencies for repository setup.
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends ca-certificates curl gnupg lsb-release unzip \
+	&& apt-get install -y --no-install-recommends ca-certificates curl git-lfs gnupg lsb-release unzip \
 	&& install -m 0755 -d /etc/apt/keyrings \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
