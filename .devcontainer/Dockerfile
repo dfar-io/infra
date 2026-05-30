@@ -24,3 +24,7 @@ RUN curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dea
 	&& apt-get install -y --no-install-recommends google-cloud-cli \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
+
+## Install dig
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends dnsutils
